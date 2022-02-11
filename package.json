@@ -1,0 +1,22 @@
+{
+  "name": "fe-electronic-newspaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nc-minh/fe-electronic-newspaper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nc-minh/fe-electronic-newspaper/issues"
+  },
+  "homepage": "https://github.com/nc-minh/fe-electronic-newspaper#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
