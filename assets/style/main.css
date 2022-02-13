@@ -59,6 +59,37 @@
     color: var(--primary-color);
 }
 
+.header__user__logged__name{
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.header__user__logged__action{
+    position: absolute;
+    background-color: rgb(236, 200, 178);
+    right: 0;
+    display: none;
+    z-index: 10;
+}
+
+.header__user__logged__action--link{
+    text-decoration: none;
+    display: block;
+    width: 10rem;
+    padding: 1.2rem 1rem;
+}
+
+.header__user__logged__name:hover .header__user__logged__action{
+    display: block
+}
+
+.header__user__logged__action--link:hover{
+    color: rgb(8, 81, 190);
+}
+
 .wrapper{
     height: 3rem;
     background-color: var(--primary-color);
