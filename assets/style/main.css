@@ -125,8 +125,14 @@
 
 .content__top__right{
     width: 40rem;
-    max-height: 41.6rem;
+    max-height: 44.6rem;
     overflow: hidden;
+}
+
+.content__top__right__name{
+    margin-bottom: 1rem;
+    color: red;
+    font-size: 2rem;
 }
 
 .content__top__right__item{
@@ -169,6 +175,13 @@
 .content__bottom__left{
     flex: 1;
     margin-right: 1rem;
+}
+
+.content__bottom__left__name{
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-style: italic;
 }
 
 .content__bottom__left__item{
