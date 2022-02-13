@@ -75,6 +75,37 @@
     font-size: 1.6rem;
 }
 
+/* topic */
+.header__nav__item__relative{
+    position: relative;
+}
+
+.header__nav__item__topic{
+    position: absolute;
+    background-color: aliceblue;
+    display: none;
+}
+
+.header__nav__item__topic__item{
+
+}
+
+.header__nav__item__topic--link{
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    width: 10rem;
+}
+
+.header__nav__item__relative:hover .header__nav__item__topic{
+    display: block;
+}
+
+.header__nav__item__topic--link:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
 .header__nav--link{
     text-decoration: none;
     height: 100%;
