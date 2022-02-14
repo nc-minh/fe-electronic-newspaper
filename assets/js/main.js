@@ -9,6 +9,7 @@ ClassicEditor
         })
         .then( editor => {
             theEditor = editor;
+            editor.ui.view.editable.element.style.height = '350px';
         } )
         .catch( err => {
             console.error( err.stack );

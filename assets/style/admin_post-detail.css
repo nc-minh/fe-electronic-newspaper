@@ -46,15 +46,28 @@ figure.image img{
 
 .content__post-user__wrapper__item{
     font-size: 1.4rem;
-}
-
-.last .content__post-user__wrapper__item:nth-child(2),
-.last .content__post-user__wrapper__item:nth-child(1){
+    margin: 0 1rem;
     padding: .5rem 1rem;
     cursor: pointer;
 }
 
-.content__post-user__wrapper__item:nth-child(1){
+.content__post-detail__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.content__post-detail__info__wrapper{
+    display: flex;
+}
+
+.content__post-detail__info__user{
+    font-size: 1.4rem;
+}
+
+.content__post-detail__info__item{
+    font-size: 1.6rem;
     margin-right: 1rem;
 }
 /* admin post detail end */
