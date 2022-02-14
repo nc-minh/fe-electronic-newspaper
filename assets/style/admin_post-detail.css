@@ -1,0 +1,60 @@
+/* admin post detail begin */
+.content__post-detail{
+    margin-top: 1rem;
+}
+.content__post-detail h2{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.content__post-detail p{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.8rem;
+}
+
+.content__post-detail h2:last-child{
+    margin-bottom: 2rem !important;
+}
+
+.content__post-detail figcaption{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+figure.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-direction: column;
+}
+
+figure.image img{
+    width: 100%;
+}
+
+.content__post-user{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__post-user__wrapper{
+    display: flex;
+}
+
+.content__post-user__wrapper__item{
+    font-size: 1.4rem;
+}
+
+.last .content__post-user__wrapper__item:nth-child(2),
+.last .content__post-user__wrapper__item:nth-child(1){
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.content__post-user__wrapper__item:nth-child(1){
+    margin-right: 1rem;
+}
+/* admin post detail end */
