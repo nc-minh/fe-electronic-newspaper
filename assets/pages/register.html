@@ -5,8 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <div id="app">
+        <header class="header mw1200">
+            <a href="/" class="header__logo">
+                <div class="header__logo__name">Báo Việt</div>
+                <div>Thông tin nhanh nhất</div>
+            </a>
+
+            <div class="header__search">
+                <input type="text" name="" id="" class="header__search__input" placeholder="Tin mới nhất">
+                <div class="header__search__btn">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="header__user">
+                <a href="login.html"><i class="far fa-user"></i></a>
+            </div>
+
+            <!-- if you logged -->
+            <!-- <div class="header__user__logged">
+                <div class="header__user__logged__name">
+                    <span>ncminh</span>
+
+                    <div class="header__user__logged__action">
+                        <div class="header__user__logged__action__item">
+                            <a href="/" class="header__user__logged__action--link">Đăng bài</a>
+                        </div>
+                        <div class="header__user__logged__action__item"> -->
+                            <!-- if you are admin -->
+                            <!-- <a href="/" class="header__user__logged__action--link">Quản lý</a>
+                        </div>
+                        <div class="header__user__logged__action__item">
+                            <a href="/" class="header__user__logged__action--link">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </header>
+
+        <div class="header__search__mb">
+            <input type="text" name="" id="" class="header__search__mb__input" placeholder="Tin mới nhất">
+            <div class="header__search__mb__btn">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <nav class="header__nav mw1200">
+                <div class="header__nav__item">
+                    <a href="/" class="header__nav--link active">Nóng</a>
+                </div>
+                <div class="header__nav__item">
+                    <a href="/" class="header__nav--link">Mới</a>
+                </div>
+                <div class="header__nav__item header__nav__item__relative">
+                    <div class="header__nav--link">Chủ Đề</div>
+
+                    <div class="header__nav__item__topic">
+                        <div class="header__nav__item__topic__item">
+                            <a href="/" class="header__nav__item__topic--link">Xã hội</a>
+                        </div>
+
+                        <div class="header__nav__item__topic__item">
+                            <a href="/" class="header__nav__item__topic--link">Văn hóa</a>
+                        </div>
+
+                        <div class="header__nav__item__topic__item">
+                            <a href="/" class="header__nav__item__topic--link">Kinh tế</a>
+                        </div>
+
+                        <div class="header__nav__item__topic__item">
+                            <a href="/" class="header__nav__item__topic--link">Giáo dục</a>
+                        </div>
+
+                        <div class="header__nav__item__topic__item">
+                            <a href="/" class="header__nav__item__topic--link">Thể thao</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="content-login mw1200">
+            <div class="content__wrapper">
+                <div class="content__wrapper__name">Sign Up!</div>
+                <div class="content__wrapper__form">
+                    <input type="text" class="content__wrapper__input" placeholder="Username*">
+                    <p class="content__wrapper__alert">Tài khoản bạn sai</p>
+                    <input type="text" class="content__wrapper__input" placeholder="Password*">
+                    <p class="content__wrapper__alert">Mật khẩu bạn sai</p>
+                    <input type="text" class="content__wrapper__input" placeholder="re-Password*">
+                    <p class="content__wrapper__alert">Mật khẩu bạn sai</p>
+                    <button class="content__wrapper__btn">Login</button>
+                </div>
+                <a href="login.html" class="content__wrapper__toRegister">Have an account already?</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__top mw1200">
+                    <div class="footer__title">
+                        <a href="/" class="header__logo footer__title__logo">
+                            <div class="header__logo__name">Báo Việt</div>
+                            <div>Thông tin nhanh nhất</div>
+                        </a>
+                    </div>
+
+                    <div class="footer__newsletter">
+                        <input class="footer__newsletter__input" id="newsletter" type="text" placeholder="Email newsletter...">
+                        <button class="footer__newsletter__btn">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">Copyright &copy; BaoViet</div>
+        </footer>
+    </div>
 </body>
 </html>

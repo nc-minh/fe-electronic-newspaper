@@ -18,6 +18,9 @@
         margin-top: 3rem;
         margin-bottom: 10rem;
     }
+
+    /* login */
+    
 }
 
 @media (max-width: 980px){
@@ -124,7 +127,20 @@
     .content{
         margin-bottom: 15rem;
     }
+    /* login */
+    .content-login{
+        height: calc(100vh - 188px - 2rem - 30px - 1rem);
+    }
+
+    .content__wrapper{
+        height: 30rem;
+    }
 }
 
+@media (max-width: 395px){
+    .content-login{
+        height: calc(100vh - 188px - 2rem - 30px - 1rem - 16px);
+    }
+}
 
 /* test */
