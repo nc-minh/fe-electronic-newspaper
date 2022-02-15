@@ -99,13 +99,13 @@
             <div class="content__wrapper">
                 <div class="content__wrapper__name">Sign Up!</div>
                 <div class="content__wrapper__form">
-                    <input type="text" class="content__wrapper__input" placeholder="Username*">
-                    <p class="content__wrapper__alert">Tài khoản bạn sai</p>
-                    <input type="text" class="content__wrapper__input" placeholder="Password*">
-                    <p class="content__wrapper__alert">Mật khẩu bạn sai</p>
-                    <input type="text" class="content__wrapper__input" placeholder="re-Password*">
-                    <p class="content__wrapper__alert">Mật khẩu bạn sai</p>
-                    <button class="content__wrapper__btn">Login</button>
+                    <input type="text" id="username" class="content__wrapper__input" placeholder="Username*">
+                    <p id="alert-username" class="content__wrapper__alert">Tài khoản bạn sai</p>
+                    <input type="text" id="password" class="content__wrapper__input" placeholder="Password*">
+                    <p id="alert-password" class="content__wrapper__alert">Mật khẩu bạn sai</p>
+                    <input type="text" id="re-password" class="content__wrapper__input" placeholder="re-Password*">
+                    <p id="alert-repassword" class="content__wrapper__alert">Mật khẩu bạn sai</p>
+                    <button onclick="checkRegister()" class="content__wrapper__btn">Register</button>
                 </div>
                 <a href="login.html" class="content__wrapper__toRegister">Have an account already?</a>
             </div>
@@ -131,5 +131,47 @@
             <div class="footer__copyright">Copyright &copy; BaoViet</div>
         </footer>
     </div>
+    <script>
+        function checkRegister(){
+            const username = document.getElementById('username').value
+            const password = document.getElementById('password').value
+            const rePassword = document.getElementById('re-password').value
+            let alertUsername = document.getElementById('alert-username')
+            let alertPassword = document.getElementById('alert-password')
+            let alertRepassword = document.getElementById('alert-repassword')
+
+            const regex = /^\w+$/g
+            const check = regex.test(username)
+            console.log(check)
+
+            if(username.length < 5 || username.length > 20){
+                alertUsername.innerText = 'Tài khoản phải lớn hơn 5 kí tự!'
+                alertUsername.style.display = 'block'
+                alertPassword.style.display = 'none'
+                alertRepassword.style.display = 'none'
+            }else if(!check){
+                alertUsername.innerText = 'Tài khoản không chứa kí tự đặc biệt!'
+                alertUsername.style.display = 'block'
+                alertPassword.style.display = 'none'
+                alertRepassword.style.display = 'none'
+            }else if(password.length < 5){
+                alertUsername.innerText = 'Mật khẩu phải lớn hơn 5 kí tự!'
+                alertUsername.style.display = 'none'
+                alertPassword.style.display = 'block'
+                alertRepassword.style.display = 'none'
+            }else if(password != rePassword){
+                alertRepassword.innerText = 'Mật khẩu nhập lại không đúng!'
+                alertUsername.style.display = 'none'
+                alertPassword.style.display = 'none'
+                alertRepassword.style.display = 'block'
+            }else{
+                alertUsername.style.display = 'none'
+                alertPassword.style.display = 'none'
+                alertRepassword.style.display = 'none'
+                console.log('done')
+                return true
+            }
+        }
+    </script>
 </body>
 </html>

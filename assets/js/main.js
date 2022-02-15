@@ -25,3 +25,4 @@ function getDataFromTheEditor() {
 document.getElementById( 'submit' ).addEventListener( 'click', () => {
     console.log( getDataFromTheEditor() );
 } );
+

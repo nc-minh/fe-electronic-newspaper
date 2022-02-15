@@ -99,11 +99,11 @@
             <div class="content__wrapper">
                 <div class="content__wrapper__name">Log in with your username!</div>
                 <div class="content__wrapper__form">
-                    <input type="text" class="content__wrapper__input" placeholder="Username*">
-                    <p class="content__wrapper__alert">Tài khoản bạn sai</p>
-                    <input type="text" class="content__wrapper__input" placeholder="Password*">
-                    <p class="content__wrapper__alert">Mật khẩu bạn sai</p>
-                    <button class="content__wrapper__btn">Login</button>
+                    <input type="text" id="username" class="content__wrapper__input" placeholder="Username*">
+                    <p id="alert-username" class="content__wrapper__alert">Tài khoản bạn sai</p>
+                    <input type="text" id="password" class="content__wrapper__input" placeholder="Password*">
+                    <p id="alert-password" class="content__wrapper__alert">Mật khẩu bạn sai</p>
+                    <button onclick="checkLogin()" class="content__wrapper__btn">Login</button>
                 </div>
                 <a href="register.html" class="content__wrapper__toRegister">Don't have an account yet?</a>
             </div>
@@ -129,5 +129,36 @@
             <div class="footer__copyright">Copyright &copy; BaoViet</div>
         </footer>
     </div>
+    <script>
+        function checkLogin(){
+            const username = document.getElementById('username').value
+            const password = document.getElementById('password').value
+            let alertUsername = document.getElementById('alert-username')
+            let alertPassword = document.getElementById('alert-password')
+
+            const regex = /^\w+$/g
+            const check = regex.test(username)
+
+            console.log(check)
+
+            if(username.length < 5 || username.length > 20){
+                alertUsername.innerText = 'Tài khoản phải lớn hơn 5 kí tự!'
+                alertUsername.style.display = 'block'
+            }else if(!check){
+                alertUsername.innerText = 'Tài khoản không chứa kí tự đặc biệt!'
+                alertUsername.style.display = 'block'
+            }else if(password.length < 5){
+                alertPassword.innerText = 'Mật khẩu phải lớn hơn 5 kí tự!'
+                alertUsername.style.display = 'none'
+                alertPassword.style.display = 'block'
+            }else{
+                alertUsername.style.display = 'none'
+                alertPassword.style.display = 'none'
+                console.log('done')
+                return true
+            }
+
+        };
+    </script>
 </body>
 </html>
